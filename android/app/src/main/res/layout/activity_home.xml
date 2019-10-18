@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".ui.RegisterActivity">
+
+    <TextView
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbarSize"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:gravity="start|center"
+            android:textSize="@dimen/txt_22"
+            android:textColor="@color/colorWhite"
+            android:text="Car Pool"
+            android:fontFamily="@font/futura_medium_bt"
+            android:background="@color/colorPrimary"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:gravity="start|center"
+                    android:textSize="@dimen/txt_27"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/futura_medium_bt"/>
+
+            <LinearLayout
+                    android:id="@+id/item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                <RelativeLayout
+                        android:id="@+id/rl_find"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/gradient_bg">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:gravity="start|center"
+                            android:textSize="@dimen/txt_18"
+                            android:textColor="@color/colorWhite"
+                            android:text="@string/find_a_ride"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <ImageView android:layout_width="40dp"
+                               android:layout_height="40dp"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_alignParentBottom="true"
+                               android:layout_marginRight="10dp"
+                               android:layout_marginEnd="10dp"
+                               android:layout_marginBottom="10dp"
+                               android:rotation="270"
+                               android:contentDescription="@string/image"
+                               android:src="@drawable/ic_next_arrow_white"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:layout_marginBottom="5dp"
+                        android:alpha="0.8"
+                        android:background="@drawable/gradient_bg">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:layout_marginTop="20dp"
+                            android:gravity="start|center"
+                            android:textSize="@dimen/txt_18"
+                            android:textColor="@color/colorWhite"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="@string/give_a_ride"/>
+
+                    <ImageView android:layout_width="40dp"
+                               android:layout_height="40dp"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_alignParentBottom="true"
+                               android:layout_marginRight="10dp"
+                               android:layout_marginEnd="10dp"
+                               android:layout_marginBottom="10dp"
+                               android:rotation="270"
+                               android:contentDescription="@string/image"
+                               android:src="@drawable/ic_next_arrow_white"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                        android:id="@+id/rl_history"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:gravity="start|center"
+                            android:textSize="@dimen/txt_18"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="@string/trip_history"/>
+
+                    <ImageView android:layout_width="40dp"
+                               android:layout_height="40dp"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_centerVertical="true"
+                               android:layout_marginRight="15dp"
+                               android:layout_marginEnd="15dp"
+                               android:rotation="270"
+                               android:contentDescription="@string/image"
+                               android:src="@drawable/ic_next_arrow_black"/>
+
+                </RelativeLayout>
+
+                <View android:layout_width="match_parent"
+                      android:layout_height="0.5dp"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginBottom="10dp"
+                      android:background="@color/colorLight"/>
+
+                <RelativeLayout
+                        android:id="@+id/rl_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="15dp"
+                            android:paddingRight="15dp"
+                            android:gravity="start|center"
+                            android:textSize="@dimen/txt_18"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/futura_medium_bt"
+                            android:text="@string/profile"/>
+
+                    <ImageView android:layout_width="40dp"
+                               android:layout_height="40dp"
+                               android:layout_alignParentRight="true"
+                               android:layout_alignParentEnd="true"
+                               android:layout_centerVertical="true"
+                               android:layout_marginRight="15dp"
+                               android:layout_marginEnd="15dp"
+                               android:rotation="270"
+                               android:contentDescription="@string/image"
+                               android:src="@drawable/ic_next_arrow_black"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:id="@+id/trip_provider"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/txt_pro_trip"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/my_trips"
+                        android:textSize="@dimen/txt_18"
+                        android:textColor="@color/colorLight2"
+                        android:fontFamily="@font/futura_medium_bt"/>
+
+                <RelativeLayout
+                        android:layout_below="@+id/txt_pro_trip"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rounded_corner_ride">
+
+                    <TextView
+                            android:id="@+id/txt_pro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/trip_started"
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/txt_16"
+                            android:gravity="start"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_pro_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ongoing_trip"
+                            android:textSize="@dimen/txt_14"
+                            android:padding="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="25dp"
+                            android:gravity="start"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorBlue"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_pro_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:maxLines="1"
+                            android:layout_below="@+id/txt_pro_on"
+                            android:textSize="@dimen/txt_14"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:textColor="@color/colorLight2"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_pro_to"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_below="@+id/txt_pro_from"
+                            android:textSize="@dimen/txt_14"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorLight2"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="38dp">
+                        <TextView
+                                android:id="@+id/txt_pro_live"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/txt_14"
+                                android:gravity="center"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="@string/live_tracking"
+                                android:textColor="@color/colorWhite"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:background="@drawable/rounded_corner_trip_end"/>
+
+                        <TextView
+                                android:id="@+id/txt_pro_end"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:gravity="center"
+                                android:text="@string/end_trip"
+                                android:textSize="@dimen/txt_14"
+                                android:textColor="@color/colorWhite"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:background="@drawable/rounded_corner_trip_end"/>
+                    </TableRow>
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:id="@+id/trip_requester"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                <TextView
+                        android:id="@+id/txt_req_trip"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/my_trips"
+                        android:textSize="@dimen/txt_18"
+                        android:textColor="@color/colorLight2"
+                        android:fontFamily="@font/futura_medium_bt"/>
+
+                <RelativeLayout
+                        android:layout_below="@+id/txt_req_trip"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/rounded_corner_ride">
+
+                    <TextView
+                            android:id="@+id/txt_req_on"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ongoing_trip"
+                            android:textSize="@dimen/txt_14"
+                            android:padding="5dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="start"
+                            android:textColor="@color/colorWhite"
+                            android:background="@color/colorBlue"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_req"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/trip_requested"
+                            android:layout_marginBottom="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="@dimen/txt_16"
+                            android:gravity="start"
+                            android:textColor="@color/colorBlack"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_req_from"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:maxLines="1"
+                            android:layout_below="@+id/txt_req"
+                            android:textSize="@dimen/txt_14"
+                            android:ellipsize="end"
+                            android:gravity="start"
+                            android:textColor="@color/colorLight2"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TextView
+                            android:id="@+id/txt_req_to"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_below="@+id/txt_req_from"
+                            android:textSize="@dimen/txt_14"
+                            android:gravity="start"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textColor="@color/colorLight2"
+                            android:fontFamily="@font/futura_medium_bt"/>
+
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="20dp"
+                            android:layout_height="38dp">
+                        <TextView
+                                android:id="@+id/txt_req_live"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_height="match_parent"
+                                android:textSize="@dimen/txt_14"
+                                android:gravity="center"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="Live Tracking"
+                                android:textColor="@color/colorWhite"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:background="@drawable/rounded_corner_trip_end"/>
+
+                        <TextView
+                                android:id="@+id/txt_req_end"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:gravity="center"
+                                android:text="@string/cancel"
+                                android:textSize="@dimen/txt_14"
+                                android:textColor="@color/colorWhite"
+                                android:fontFamily="@font/futura_medium_bt"
+                                android:background="@drawable/rounded_corner_trip_end"/>
+                    </TableRow>
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/rounded_corner_ride"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/txt_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_medium_bt"
+                android:textColor="@color/colorBlack"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/txt_18"
+                android:text="Loading..."/>
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toLeftOf="@+id/txt_load"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+    </RelativeLayout>
+</RelativeLayout>

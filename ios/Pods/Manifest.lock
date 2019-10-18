@@ -1,0 +1,33 @@
+PODS:
+  - Crashlytics (3.14.0):
+    - Fabric (~> 1.10.2)
+  - Fabric (1.10.2)
+  - GoogleMaps (2.6.0):
+    - GoogleMaps/Maps (= 2.6.0)
+  - GoogleMaps/Base (2.6.0)
+  - GoogleMaps/Maps (2.6.0):
+    - GoogleMaps/Base
+  - Toast-Swift (5.0.0)
+
+DEPENDENCIES:
+  - Crashlytics
+  - Fabric
+  - GoogleMaps (~> 2.6.0)
+  - Toast-Swift (~> 5.0.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+    - GoogleMaps
+    - Toast-Swift
+
+SPEC CHECKSUMS:
+  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
+  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  GoogleMaps: 42f91c68b7fa2f84d5c86597b18ceb99f5414c7f
+  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+
+PODFILE CHECKSUM: 268c5802282f3b5982d205a232d7dfe703571831
+
+COCOAPODS: 1.7.1

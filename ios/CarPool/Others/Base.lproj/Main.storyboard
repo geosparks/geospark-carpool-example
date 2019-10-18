@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gYF-9p-QMg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MavenPro-Bold.ttf">
+            <string>MavenProBold</string>
+        </array>
+        <array key="MavenPro-Medium.ttf">
+            <string>MavenProMedium</string>
+        </array>
+        <array key="MavenPro-Regular.ttf">
+            <string>MavenProRegular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="q50-Mg-b3W">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="gYF-9p-QMg" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="6j6-aR-2NP">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="22"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fm8-WX-bxg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ffi-bx-FTV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MLU-w9-E99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="145"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By GeoSpark" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1i-Ql-Mgc">
+                                <rect key="frame" x="20" y="278" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qZH-bG-wIZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="26"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUh-jT-aGT">
+                                <rect key="frame" x="20" y="398" width="374" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aU0-wc-kok">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="45"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Z0o-eZ-0pC"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dxy-Af-DNA">
+                                        <rect key="frame" x="0.0" y="55" width="374" height="45"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="mmy-Td-FSl"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Cup-Nb-9Wx"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-Be-qU7">
+                                <rect key="frame" x="20" y="762" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.14901960784313725" green="0.31372549019607843" blue="0.63529411764705879" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Soe-Nl-0Pt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Myx-t3-VGf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Car Pool" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdJ-ey-LUa">
+                                <rect key="frame" x="137" y="238" width="140.5" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Las-gF-J1v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Xi-yB-Y3A"/>
+                            <constraint firstItem="K1i-Ql-Mgc" firstAttribute="top" secondItem="LdJ-ey-LUa" secondAttribute="bottom" constant="-10" id="74V-ZQ-hHr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUh-jT-aGT" secondAttribute="trailing" constant="20" id="HzU-XR-QWU"/>
+                            <constraint firstItem="ZOI-Be-qU7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Lzc-W0-psb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZOI-Be-qU7" secondAttribute="bottom" constant="50" id="Nlf-IM-vID"/>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SwS-H6-u6b"/>
+                            <constraint firstItem="LdJ-ey-LUa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U8i-oF-gbe"/>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="top" secondItem="K1i-Ql-Mgc" secondAttribute="bottom" constant="70" id="V4g-Ac-lEY"/>
+                            <constraint firstItem="K1i-Ql-Mgc" firstAttribute="leading" secondItem="kUh-jT-aGT" secondAttribute="leading" id="VEv-UR-UZm"/>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i3J-md-2Gk"/>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lPV-eB-3Qz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZOI-Be-qU7" secondAttribute="trailing" constant="20" id="oOH-pC-HeF"/>
+                            <constraint firstItem="kUh-jT-aGT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vxA-oN-kaF"/>
+                            <constraint firstItem="K1i-Ql-Mgc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="z8d-iZ-FpS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="leG-nb-tCw"/>
+                    <connections>
+                        <outlet property="phoneNumberTextfield" destination="dxy-Af-DNA" id="rgB-RG-CrR"/>
+                        <outlet property="userNameTextfield" destination="aU0-wc-kok" id="epQ-vL-VYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="478" y="146"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="XK6-RX-xzw">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kBU-dU-PsE" customClass="MainViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4jh-q0-LtS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Hi Ravi!" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n1H-hZ-dmt">
+                                <rect key="frame" x="10" y="0.0" width="394" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JVa-0f-AdG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iuf-Z1-8rB">
+                                <rect key="frame" x="0.0" y="80" width="414" height="400"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN5-eB-YUh">
+                                        <rect key="frame" x="0.0" y="8" width="414" height="95.5"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Find A Ride" image="more-than-white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="findaRideAction:" destination="kBU-dU-PsE" eventType="touchUpInside" id="EjZ-j8-tzR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGF-Po-N4I">
+                                        <rect key="frame" x="0.0" y="104.5" width="414" height="95"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Give A Ride" image="more-than-white">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="getaRideAction:" destination="kBU-dU-PsE" eventType="touchUpInside" id="ccF-fR-bgC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tcV-GQ-fhC">
+                                        <rect key="frame" x="0.0" y="200.5" width="414" height="95.5"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Trip History" image="more-than-black">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tripHistoryAction:" destination="kBU-dU-PsE" eventType="touchUpInside" id="r4A-pV-JW2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9L9-El-mXa" userLabel="Profile">
+                                        <rect key="frame" x="0.0" y="297" width="414" height="95"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Profile" image="more-than-black">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profileAction:" destination="kBU-dU-PsE" eventType="touchUpInside" id="28P-jR-m4U"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-00-MLV">
+                                        <rect key="frame" x="0.0" y="392" width="414" height="0.0"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="200" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="200" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Logout" image="more-than-black">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logoutAction:" destination="kBU-dU-PsE" eventType="touchUpInside" id="2LW-vS-dxN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Tuy-AA-SwM"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="8" right="0.0"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L7z-pn-iar" firstAttribute="trailing" secondItem="iuf-Z1-8rB" secondAttribute="trailing" id="3E6-bb-cXO"/>
+                            <constraint firstItem="iuf-Z1-8rB" firstAttribute="top" secondItem="n1H-hZ-dmt" secondAttribute="bottom" id="9q7-Ut-fIP"/>
+                            <constraint firstItem="iuf-Z1-8rB" firstAttribute="leading" secondItem="L7z-pn-iar" secondAttribute="leading" id="Qa0-D5-HFg"/>
+                            <constraint firstItem="L7z-pn-iar" firstAttribute="trailing" secondItem="n1H-hZ-dmt" secondAttribute="trailing" constant="10" id="byv-zt-LS3"/>
+                            <constraint firstItem="n1H-hZ-dmt" firstAttribute="leading" secondItem="L7z-pn-iar" secondAttribute="leading" constant="10" id="pWZ-wo-DrJ"/>
+                            <constraint firstItem="n1H-hZ-dmt" firstAttribute="top" secondItem="4jh-q0-LtS" secondAttribute="top" id="rlW-Ig-59s"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="L7z-pn-iar"/>
+                    </view>
+                    <connections>
+                        <outlet property="findARide" destination="aN5-eB-YUh" id="cV6-6y-df4"/>
+                        <outlet property="giveARide" destination="rGF-Po-N4I" id="Z9H-3l-Hq0"/>
+                        <outlet property="userName" destination="n1H-hZ-dmt" id="xqb-O2-zQc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XD2-Ke-6LF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142.0289855072465" y="143.97321428571428"/>
+        </scene>
+        <!--Finda Ride View Controller-->
+        <scene sceneID="cyL-z1-0jy">
+            <objects>
+                <viewController storyboardIdentifier="FindaRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MUO-RD-c3E" customClass="FindaRideViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vq4-8s-40k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RLg-1D-zzz" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lXX-WP-NkG">
+                                <rect key="frame" x="20" y="54" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From :   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZk-Ls-AlG">
+                                        <rect key="frame" x="0.0" y="6.5" width="73.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap on Map to get Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lN8-7v-KbY">
+                                        <rect key="frame" x="73.5" y="0.0" width="300.5" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="gug-eM-SBc"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZL3-XG-dXJ">
+                                <rect key="frame" x="20" y="98" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To :   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnV-CN-FJj">
+                                        <rect key="frame" x="0.0" y="6.5" width="51" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap on Map to get Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mb9-XO-I0y">
+                                        <rect key="frame" x="51" y="0.0" width="323" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="CDz-Ls-iT7"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFq-Qc-ONd">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wAc-hc-jXC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <state key="normal" title="Find A Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findRideAction:" destination="MUO-RD-c3E" eventType="touchUpInside" id="6k4-hn-CzV"/>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wsI-sm-5R6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZL3-XG-dXJ" firstAttribute="top" secondItem="lXX-WP-NkG" secondAttribute="bottom" constant="10" id="7Yu-xW-3jX"/>
+                            <constraint firstItem="DFq-Qc-ONd" firstAttribute="leading" secondItem="wCu-q1-O2P" secondAttribute="leading" constant="20" id="9O5-bK-bUB"/>
+                            <constraint firstItem="wCu-q1-O2P" firstAttribute="trailing" secondItem="DFq-Qc-ONd" secondAttribute="trailing" constant="20" id="C6u-Sc-QQv"/>
+                            <constraint firstItem="ZL3-XG-dXJ" firstAttribute="trailing" secondItem="lXX-WP-NkG" secondAttribute="trailing" id="E7x-sF-04p"/>
+                            <constraint firstItem="wCu-q1-O2P" firstAttribute="bottom" secondItem="RLg-1D-zzz" secondAttribute="bottom" id="NNG-0K-cDD"/>
+                            <constraint firstItem="lXX-WP-NkG" firstAttribute="leading" secondItem="wCu-q1-O2P" secondAttribute="leading" constant="20" id="OHb-Rj-BIM"/>
+                            <constraint firstItem="RLg-1D-zzz" firstAttribute="leading" secondItem="wCu-q1-O2P" secondAttribute="leading" id="RfJ-XX-TUh"/>
+                            <constraint firstItem="wCu-q1-O2P" firstAttribute="bottom" secondItem="DFq-Qc-ONd" secondAttribute="bottom" constant="20" id="Vt1-o4-Ab2"/>
+                            <constraint firstItem="wCu-q1-O2P" firstAttribute="trailing" secondItem="lXX-WP-NkG" secondAttribute="trailing" constant="20" id="guB-jo-iHR"/>
+                            <constraint firstItem="RLg-1D-zzz" firstAttribute="top" secondItem="wCu-q1-O2P" secondAttribute="top" id="j14-FQ-thy"/>
+                            <constraint firstItem="lXX-WP-NkG" firstAttribute="top" secondItem="wCu-q1-O2P" secondAttribute="top" constant="10" id="mpx-FG-eIG"/>
+                            <constraint firstItem="wCu-q1-O2P" firstAttribute="trailing" secondItem="RLg-1D-zzz" secondAttribute="trailing" id="r7s-c6-XcE"/>
+                            <constraint firstItem="ZL3-XG-dXJ" firstAttribute="leading" secondItem="lXX-WP-NkG" secondAttribute="leading" id="uC0-j1-3Tc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wCu-q1-O2P"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromLocationTextField" destination="lN8-7v-KbY" id="ZtD-Fw-dSY"/>
+                        <outlet property="mapView" destination="RLg-1D-zzz" id="vF4-Vz-dvV"/>
+                        <outlet property="toLocationTextField" destination="Mb9-XO-I0y" id="CWR-b5-f4A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0c-01-At5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459.4202898550725" y="142.63392857142856"/>
+        </scene>
+        <!--Trip History View Controller-->
+        <scene sceneID="nVy-do-xEH">
+            <objects>
+                <viewController storyboardIdentifier="TripHistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tPg-Ym-WXQ" customClass="TripHistoryViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Act-PQ-4z1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ApI-pT-uBk">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="wPp-8k-oLU">
+                                    <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="43.5" id="RW5-MA-5v9">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RW5-MA-5v9" id="E1K-c4-h44">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="accessoryView" destination="E1K-c4-h44" id="auv-Lm-6Mw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tPg-Ym-WXQ" id="2Ei-i4-eip"/>
+                                    <outlet property="delegate" destination="tPg-Ym-WXQ" id="vYz-o7-rbw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ApI-pT-uBk" firstAttribute="leading" secondItem="Act-PQ-4z1" secondAttribute="leading" id="csW-sb-M73"/>
+                            <constraint firstAttribute="bottom" secondItem="ApI-pT-uBk" secondAttribute="bottom" id="fLf-Tl-q6r"/>
+                            <constraint firstItem="ApI-pT-uBk" firstAttribute="top" secondItem="Act-PQ-4z1" secondAttribute="top" id="iea-QX-kv2"/>
+                            <constraint firstAttribute="trailing" secondItem="ApI-pT-uBk" secondAttribute="trailing" id="t51-o1-6zP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KIp-BN-cKi"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ApI-pT-uBk" id="2bZ-ro-3FV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M91-QT-Igh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3841" y="146"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="csE-2Z-KLg">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FRa-ka-ipS" customClass="ProfileViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="erz-Do-8dj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yl9-nR-Dgv">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbc-yB-X23">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDq-74-3dm">
+                                        <rect key="frame" x="0.0" y="33" width="374" height="27"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="oQQ-l0-Y5h"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N7T-Nb-aLD">
+                                <rect key="frame" x="20" y="144" width="374" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Id " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Do-Om-LM5">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="s76" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7H-HS-Kb8">
+                                        <rect key="frame" x="0.0" y="33" width="374" height="27"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Dk-Y3-2Cd"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-JT-Z5V">
+                                <rect key="frame" x="20" y="214" width="374" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ft3-mo-mdY">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="19"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLZ-67-Sc3">
+                                        <rect key="frame" x="0.0" y="33" width="374" height="27"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="mGX-0c-0P5"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yl9-nR-Dgv" firstAttribute="top" secondItem="FgU-Jf-oMm" secondAttribute="top" constant="20" id="01m-Wl-GcW"/>
+                            <constraint firstItem="FgU-Jf-oMm" firstAttribute="trailing" secondItem="yl9-nR-Dgv" secondAttribute="trailing" constant="20" id="8ZI-H9-nGs"/>
+                            <constraint firstItem="nbL-JT-Z5V" firstAttribute="trailing" secondItem="N7T-Nb-aLD" secondAttribute="trailing" id="Fn9-EY-ilD"/>
+                            <constraint firstItem="nbL-JT-Z5V" firstAttribute="top" secondItem="N7T-Nb-aLD" secondAttribute="bottom" constant="10" id="God-Ba-Fys"/>
+                            <constraint firstItem="nbL-JT-Z5V" firstAttribute="leading" secondItem="N7T-Nb-aLD" secondAttribute="leading" id="L8h-c2-1gA"/>
+                            <constraint firstItem="N7T-Nb-aLD" firstAttribute="top" secondItem="yl9-nR-Dgv" secondAttribute="bottom" constant="20" id="Ntb-Jf-9pp"/>
+                            <constraint firstItem="yl9-nR-Dgv" firstAttribute="leading" secondItem="FgU-Jf-oMm" secondAttribute="leading" constant="20" id="ZTT-1z-yER"/>
+                            <constraint firstItem="N7T-Nb-aLD" firstAttribute="trailing" secondItem="yl9-nR-Dgv" secondAttribute="trailing" id="wbk-hV-zCi"/>
+                            <constraint firstItem="N7T-Nb-aLD" firstAttribute="leading" secondItem="yl9-nR-Dgv" secondAttribute="leading" id="x1j-hy-c2H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FgU-Jf-oMm"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumber" destination="ZLZ-67-Sc3" id="Phv-9f-8yH"/>
+                        <outlet property="userId" destination="x7H-HS-Kb8" id="bGa-HE-rCD"/>
+                        <outlet property="userName" destination="QDq-74-3dm" id="bCK-1C-wUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dzy-qq-T4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2460" y="803"/>
+        </scene>
+        <!--My Trip View Controller-->
+        <scene sceneID="yoK-iJ-v5I">
+            <objects>
+                <viewController storyboardIdentifier="MyTripViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wdC-8q-wGb" customClass="MyTripViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UhI-Gy-BZA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Hi Ravi!" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROa-HY-E8j">
+                                <rect key="frame" x="10" y="44" width="394" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="j5t-jg-XzD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Trips" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVa-dp-5eI">
+                                <rect key="frame" x="10" y="134" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="mtn-Qn-Ka8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="24"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ee-ac-4sx">
+                                <rect key="frame" x="10" y="194" width="394" height="192"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip Started" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pom-BV-TFc">
+                                        <rect key="frame" x="8" y="2" width="120" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Iva-eY-Gd8"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="OGr-H5-uID"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONGOING TRIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVZ-gH-blJ">
+                                        <rect key="frame" x="266" y="2" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="HKq-cs-Trj"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="VmJ-ug-Drc"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="ZVB-X2-Weg"/>
+                                            <constraint firstAttribute="height" constant="30" id="gA8-uF-R2M"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM  : 164, 2nd Floor, 9th Main Rd, Sector 6, HSR Layout, Bengaluru, Karnataka 560102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nN-kw-ohk">
+                                        <rect key="frame" x="8" y="42" width="378" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WGv-gC-Zqj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO  :164, 2nd Floor, 9th Main Rd, Sector 6, HSR Layout, Bengaluru, Karnataka 560102" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lM-Uv-KNs">
+                                        <rect key="frame" x="8" y="73" width="378" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="GjE-tf-huX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="h27-A2-uvs">
+                                        <rect key="frame" x="8" y="142" width="378" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuV-Qd-qqi">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                                <state key="normal" title="Live Tracking"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tripLiveTracking:" destination="wdC-8q-wGb" eventType="touchUpInside" id="6bc-qN-Y6y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htz-7r-3g0">
+                                                <rect key="frame" x="194" y="0.0" width="184" height="40"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                                <state key="normal" title="End trip"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="endTrip:" destination="wdC-8q-wGb" eventType="touchUpInside" id="h7R-UZ-kiQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="mxs-qI-aFa"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YVZ-gH-blJ" secondAttribute="trailing" constant="8" id="AXR-FK-pjT"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pom-BV-TFc" secondAttribute="trailing" constant="8" id="Dzv-er-5IF"/>
+                                    <constraint firstAttribute="height" constant="192" id="Fzb-Ee-JZ2"/>
+                                    <constraint firstItem="9nN-kw-ohk" firstAttribute="leading" secondItem="2ee-ac-4sx" secondAttribute="leading" constant="8" id="J2M-9l-59a"/>
+                                    <constraint firstItem="h27-A2-uvs" firstAttribute="leading" secondItem="4lM-Uv-KNs" secondAttribute="leading" id="O8J-cb-Ni9"/>
+                                    <constraint firstItem="h27-A2-uvs" firstAttribute="trailing" secondItem="4lM-Uv-KNs" secondAttribute="trailing" id="OUf-cN-LhY"/>
+                                    <constraint firstItem="YVZ-gH-blJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pom-BV-TFc" secondAttribute="trailing" constant="8" symbolic="YES" id="Rgl-jQ-TGr"/>
+                                    <constraint firstItem="4lM-Uv-KNs" firstAttribute="trailing" secondItem="9nN-kw-ohk" secondAttribute="trailing" id="Ry7-aN-Pva"/>
+                                    <constraint firstItem="Pom-BV-TFc" firstAttribute="top" secondItem="2ee-ac-4sx" secondAttribute="top" constant="2" id="TpK-P4-1yN"/>
+                                    <constraint firstItem="4lM-Uv-KNs" firstAttribute="top" secondItem="9nN-kw-ohk" secondAttribute="bottom" constant="1" id="fa9-tZ-2Pz"/>
+                                    <constraint firstAttribute="trailing" secondItem="9nN-kw-ohk" secondAttribute="trailing" constant="8" id="kb3-PY-Qxj"/>
+                                    <constraint firstAttribute="bottom" secondItem="h27-A2-uvs" secondAttribute="bottom" constant="10" id="llV-O1-SCs"/>
+                                    <constraint firstItem="Pom-BV-TFc" firstAttribute="leading" secondItem="2ee-ac-4sx" secondAttribute="leading" constant="8" id="rK6-VW-CLn"/>
+                                    <constraint firstItem="9nN-kw-ohk" firstAttribute="top" secondItem="Pom-BV-TFc" secondAttribute="bottom" constant="10" id="uuG-au-60s"/>
+                                    <constraint firstItem="4lM-Uv-KNs" firstAttribute="leading" secondItem="9nN-kw-ohk" secondAttribute="leading" id="uw4-h9-MPc"/>
+                                    <constraint firstItem="YVZ-gH-blJ" firstAttribute="top" secondItem="2ee-ac-4sx" secondAttribute="top" constant="2" id="xBV-N9-1WD"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ROa-HY-E8j" firstAttribute="leading" secondItem="xjn-36-Tlf" secondAttribute="leading" constant="10" id="6fx-la-YYO"/>
+                            <constraint firstItem="2ee-ac-4sx" firstAttribute="top" secondItem="EVa-dp-5eI" secondAttribute="bottom" constant="20" id="7Uz-w8-6Ad"/>
+                            <constraint firstItem="xjn-36-Tlf" firstAttribute="trailing" secondItem="ROa-HY-E8j" secondAttribute="trailing" constant="10" id="7jn-Sn-aW4"/>
+                            <constraint firstItem="2ee-ac-4sx" firstAttribute="trailing" secondItem="EVa-dp-5eI" secondAttribute="trailing" id="APl-q0-fbV"/>
+                            <constraint firstItem="EVa-dp-5eI" firstAttribute="trailing" secondItem="ROa-HY-E8j" secondAttribute="trailing" id="IZg-5x-6iG"/>
+                            <constraint firstItem="2ee-ac-4sx" firstAttribute="leading" secondItem="EVa-dp-5eI" secondAttribute="leading" id="Oh6-rb-KAx"/>
+                            <constraint firstItem="EVa-dp-5eI" firstAttribute="top" secondItem="ROa-HY-E8j" secondAttribute="bottom" constant="10" id="c1Z-HJ-aJe"/>
+                            <constraint firstItem="ROa-HY-E8j" firstAttribute="top" secondItem="xjn-36-Tlf" secondAttribute="top" id="sbX-MR-qTH"/>
+                            <constraint firstItem="EVa-dp-5eI" firstAttribute="leading" secondItem="ROa-HY-E8j" secondAttribute="leading" id="zdp-Nw-MMF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xjn-36-Tlf"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromAddress" destination="9nN-kw-ohk" id="dIt-Zf-vjt"/>
+                        <outlet property="toAddress" destination="4lM-Uv-KNs" id="9Zd-Lh-U0P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="339-yT-QgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3162" y="803"/>
+        </scene>
+        <!--Trip History Details View Controller-->
+        <scene sceneID="soq-Tt-Ave">
+            <objects>
+                <viewController storyboardIdentifier="TripHistoryDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xhw-9a-vhG" customClass="TripHistoryDetailsViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WhQ-IQ-IBf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qxw-8z-Kua" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qxw-8z-Kua" firstAttribute="top" secondItem="iZT-Vy-y7G" secondAttribute="top" id="42R-pd-o5O"/>
+                            <constraint firstItem="iZT-Vy-y7G" firstAttribute="bottom" secondItem="qxw-8z-Kua" secondAttribute="bottom" id="7yr-dO-zGq"/>
+                            <constraint firstItem="qxw-8z-Kua" firstAttribute="leading" secondItem="iZT-Vy-y7G" secondAttribute="leading" id="XXN-j1-a1z"/>
+                            <constraint firstItem="iZT-Vy-y7G" firstAttribute="trailing" secondItem="qxw-8z-Kua" secondAttribute="trailing" id="crx-gU-3dc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iZT-Vy-y7G"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="qxw-8z-Kua" id="wfa-JT-X0U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Win-eN-ech" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4513" y="146"/>
+        </scene>
+        <!--Find Ride Details View Controller-->
+        <scene sceneID="XJt-cF-kdk">
+            <objects>
+                <viewController storyboardIdentifier="FindRideDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="282-JI-C6Q" customClass="FindRideDetailsViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZKV-83-90E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n1C-Ke-arS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="Dih-Kh-9M4">
+                                    <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="43.5" id="DHZ-Bk-etK">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DHZ-Bk-etK" id="cgb-OJ-hjp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="282-JI-C6Q" id="bfE-9F-lLS"/>
+                                    <outlet property="delegate" destination="282-JI-C6Q" id="oIa-4H-9Tq"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="n1C-Ke-arS" firstAttribute="top" secondItem="j46-Wj-uHh" secondAttribute="top" id="Luf-0I-iNb"/>
+                            <constraint firstItem="j46-Wj-uHh" firstAttribute="trailing" secondItem="n1C-Ke-arS" secondAttribute="trailing" id="d4k-Gu-2Vo"/>
+                            <constraint firstItem="j46-Wj-uHh" firstAttribute="bottom" secondItem="n1C-Ke-arS" secondAttribute="bottom" id="qYS-9X-7Te"/>
+                            <constraint firstItem="n1C-Ke-arS" firstAttribute="leading" secondItem="j46-Wj-uHh" secondAttribute="leading" id="xpf-wL-94O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="j46-Wj-uHh"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="n1C-Ke-arS" id="aEC-E7-gFj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NET-fQ-hnG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3090" y="143"/>
+        </scene>
+        <!--Geta Ride View Controller-->
+        <scene sceneID="1Mt-zT-3m0">
+            <objects>
+                <viewController storyboardIdentifier="GetaRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XMp-Xp-HPB" customClass="GetaRideViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R8T-RR-xEl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yMc-xn-giM" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="U4O-Of-51P">
+                                <rect key="frame" x="20" y="54" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From :   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q25-DY-FgU">
+                                        <rect key="frame" x="0.0" y="6.5" width="73.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap on Map to get Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Yw-Nv-yht">
+                                        <rect key="frame" x="73.5" y="0.0" width="300.5" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="fOw-CU-YHw"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UcR-4Y-MIC">
+                                <rect key="frame" x="20" y="98" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To :   " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POK-yb-ReI">
+                                        <rect key="frame" x="0.0" y="6.5" width="51" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="18"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap on Map to get Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cTv-Wx-cdK">
+                                        <rect key="frame" x="51" y="0.0" width="323" height="34"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" notEnabled="YES"/>
+                                        </accessibility>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="9WH-w5-b9v"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMh-tn-o9a">
+                                <rect key="frame" x="20" y="792" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="FPG-tX-gEU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <state key="normal" title="Give A Ride">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findRideAction:" destination="XMp-Xp-HPB" eventType="touchUpInside" id="Y1J-C8-lCa"/>
+                                    <action selector="getStarted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4vE-mM-Yvd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yMc-xn-giM" firstAttribute="leading" secondItem="xyv-0R-KRT" secondAttribute="leading" id="BCm-Q8-aZp"/>
+                            <constraint firstItem="UcR-4Y-MIC" firstAttribute="top" secondItem="U4O-Of-51P" secondAttribute="bottom" constant="10" id="E3U-5V-6Pa"/>
+                            <constraint firstItem="U4O-Of-51P" firstAttribute="leading" secondItem="xyv-0R-KRT" secondAttribute="leading" constant="20" id="K6H-sJ-vry"/>
+                            <constraint firstItem="U4O-Of-51P" firstAttribute="top" secondItem="xyv-0R-KRT" secondAttribute="top" constant="10" id="TaH-Ll-igM"/>
+                            <constraint firstItem="xyv-0R-KRT" firstAttribute="trailing" secondItem="U4O-Of-51P" secondAttribute="trailing" constant="20" id="b3C-lC-mw2"/>
+                            <constraint firstItem="UcR-4Y-MIC" firstAttribute="leading" secondItem="U4O-Of-51P" secondAttribute="leading" id="dvc-Vf-6Kr"/>
+                            <constraint firstItem="xyv-0R-KRT" firstAttribute="trailing" secondItem="sMh-tn-o9a" secondAttribute="trailing" constant="20" id="eOM-Ax-N6p"/>
+                            <constraint firstItem="xyv-0R-KRT" firstAttribute="bottom" secondItem="yMc-xn-giM" secondAttribute="bottom" id="heD-il-zdl"/>
+                            <constraint firstItem="xyv-0R-KRT" firstAttribute="trailing" secondItem="yMc-xn-giM" secondAttribute="trailing" id="oTm-Ia-NeA"/>
+                            <constraint firstItem="yMc-xn-giM" firstAttribute="top" secondItem="xyv-0R-KRT" secondAttribute="top" id="qiT-a8-ckg"/>
+                            <constraint firstItem="xyv-0R-KRT" firstAttribute="bottom" secondItem="sMh-tn-o9a" secondAttribute="bottom" constant="20" id="sRX-nL-1gb"/>
+                            <constraint firstItem="UcR-4Y-MIC" firstAttribute="trailing" secondItem="U4O-Of-51P" secondAttribute="trailing" id="wdu-v9-zmE"/>
+                            <constraint firstItem="sMh-tn-o9a" firstAttribute="leading" secondItem="xyv-0R-KRT" secondAttribute="leading" constant="20" id="xex-YB-YvT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xyv-0R-KRT"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromLocationTextField" destination="5Yw-Nv-yht" id="iK2-Dr-Daw"/>
+                        <outlet property="mapView" destination="yMc-xn-giM" id="98p-tX-Ga5"/>
+                        <outlet property="toLocationTextField" destination="cTv-Wx-cdK" id="cA5-3e-XL3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zc2-Hf-6Co" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459.4202898550725" y="142.63392857142856"/>
+        </scene>
+        <!--Geta Ride Details View Controller-->
+        <scene sceneID="DPh-7H-sJ0">
+            <objects>
+                <viewController storyboardIdentifier="GetaRideDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZdZ-UQ-pjX" customClass="GetaRideDetailsViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4I-X0-kj9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uCy-Dv-6Rp">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="821"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="rzo-HI-o2H">
+                                    <rect key="frame" x="0.0" y="99.5" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="43.5" id="ixm-OG-Arr">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ixm-OG-Arr" id="j7X-Pi-8TG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZdZ-UQ-pjX" id="vVe-ey-G1B"/>
+                                    <outlet property="delegate" destination="ZdZ-UQ-pjX" id="opR-EB-zYw"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyA-6D-C0U">
+                                <rect key="frame" x="20" y="831" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nTd-5T-Ptv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                <state key="normal" title="Start Trip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTrip:" destination="ZdZ-UQ-pjX" eventType="touchUpInside" id="UF2-nB-8VV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="uCy-Dv-6Rp" firstAttribute="leading" secondItem="CYW-8I-j5z" secondAttribute="leading" id="59a-bR-B1e"/>
+                            <constraint firstItem="uyA-6D-C0U" firstAttribute="leading" secondItem="CYW-8I-j5z" secondAttribute="leading" constant="20" id="Aq8-2B-RNp"/>
+                            <constraint firstItem="CYW-8I-j5z" firstAttribute="trailing" secondItem="uyA-6D-C0U" secondAttribute="trailing" constant="20" id="Pft-9Z-IPE"/>
+                            <constraint firstItem="uCy-Dv-6Rp" firstAttribute="top" secondItem="o4I-X0-kj9" secondAttribute="top" id="VYf-am-rxB"/>
+                            <constraint firstItem="uCy-Dv-6Rp" firstAttribute="trailing" secondItem="CYW-8I-j5z" secondAttribute="trailing" id="Xtt-E3-5H3"/>
+                            <constraint firstItem="uyA-6D-C0U" firstAttribute="top" secondItem="uCy-Dv-6Rp" secondAttribute="bottom" constant="10" id="oNP-hj-TXb"/>
+                            <constraint firstAttribute="bottom" secondItem="uyA-6D-C0U" secondAttribute="bottom" constant="15" id="uOB-YN-mki"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CYW-8I-j5z"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="uCy-Dv-6Rp" id="yB6-HL-uzG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lmr-Qg-zpM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="819.64285714285711"/>
+        </scene>
+        <!--My Trip Find Ride View Controller-->
+        <scene sceneID="n37-O1-jxR">
+            <objects>
+                <viewController storyboardIdentifier="MyTripFindRideViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KiE-b6-Q7G" customClass="MyTripFindRideViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AK2-WI-5Hp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Hi Ravi!" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaj-Bk-HVz">
+                                <rect key="frame" x="10" y="44" width="394" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3R0-Xc-52z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Trips" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZr-eD-1bc">
+                                <rect key="frame" x="10" y="134" width="394" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nJR-q5-FR0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MavenProBold" family="Maven Pro" pointSize="24"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1V-ga-E6W">
+                                <rect key="frame" x="10" y="194" width="394" height="192"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trip requested:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQU-SX-XV8">
+                                        <rect key="frame" x="8" y="2" width="120" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="K50-NL-eCM"/>
+                                            <constraint firstAttribute="height" constant="30" id="TAK-iG-SmR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="17"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NJ-of-kUd">
+                                        <rect key="frame" x="8" y="42" width="378" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="31T-qD-mUu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y6-7L-MLc">
+                                        <rect key="frame" x="8" y="73" width="378" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="WG9-2p-mTK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-sJ-PZr">
+                                        <rect key="frame" x="8" y="144" width="378" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpc-Kk-SD3">
+                                                <rect key="frame" x="0.0" y="0.0" width="184" height="40"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="Mkq-Uy-DOn"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="RPA-gf-gcV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                                <state key="normal" title="Cancel "/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="endTrip:" destination="KiE-b6-Q7G" eventType="touchUpInside" id="RaS-HI-1IW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dj6-v5-QIH">
+                                                <rect key="frame" x="194" y="0.0" width="184" height="40"/>
+                                                <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Aa2-1R-crx"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Dhf-GL-Fya"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="20"/>
+                                                <state key="normal" title="Live Tracking"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tripLiveTracking:" destination="KiE-b6-Q7G" eventType="touchUpInside" id="jeS-Vt-GN0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fgc-1H-l2J"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ONGOING TRIP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-RD-hT3">
+                                        <rect key="frame" x="266" y="2" width="120" height="30"/>
+                                        <color key="backgroundColor" red="0.14901960780000001" green="0.31372549020000001" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="Owj-bn-eZk"/>
+                                            <constraint firstAttribute="height" constant="30" id="dGE-B6-Yjg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MavenProMedium" family="Maven Pro" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="2NJ-of-kUd" firstAttribute="leading" secondItem="X1V-ga-E6W" secondAttribute="leading" constant="8" id="0FK-bj-vQJ"/>
+                                    <constraint firstItem="6y6-7L-MLc" firstAttribute="leading" secondItem="2NJ-of-kUd" secondAttribute="leading" id="28a-dO-83Z"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EQU-SX-XV8" secondAttribute="trailing" constant="20" symbolic="YES" id="5Ff-KH-zlm"/>
+                                    <constraint firstItem="EQU-SX-XV8" firstAttribute="top" secondItem="X1V-ga-E6W" secondAttribute="top" constant="2" id="5rr-cF-ktb"/>
+                                    <constraint firstAttribute="trailing" secondItem="2NJ-of-kUd" secondAttribute="trailing" constant="8" id="B3A-OH-RMj"/>
+                                    <constraint firstItem="EQU-SX-XV8" firstAttribute="leading" secondItem="X1V-ga-E6W" secondAttribute="leading" constant="8" id="Cnm-cT-SwE"/>
+                                    <constraint firstItem="5eX-sJ-PZr" firstAttribute="trailing" secondItem="6y6-7L-MLc" secondAttribute="trailing" id="QZy-gQ-uoS"/>
+                                    <constraint firstItem="6y6-7L-MLc" firstAttribute="top" secondItem="2NJ-of-kUd" secondAttribute="bottom" constant="1" id="RsW-XB-W62"/>
+                                    <constraint firstItem="5eX-sJ-PZr" firstAttribute="leading" secondItem="6y6-7L-MLc" secondAttribute="leading" id="ace-vS-4sS"/>
+                                    <constraint firstAttribute="bottom" secondItem="5eX-sJ-PZr" secondAttribute="bottom" constant="8" id="dkN-lG-Kev"/>
+                                    <constraint firstItem="2NJ-of-kUd" firstAttribute="top" secondItem="EQU-SX-XV8" secondAttribute="bottom" constant="10" id="gLw-os-75N"/>
+                                    <constraint firstAttribute="height" constant="192" id="gM8-Si-Vmv"/>
+                                    <constraint firstItem="Ezp-RD-hT3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EQU-SX-XV8" secondAttribute="trailing" constant="8" symbolic="YES" id="nyr-SJ-6vb"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ezp-RD-hT3" secondAttribute="trailing" constant="8" id="pes-Fd-MBx"/>
+                                    <constraint firstItem="Ezp-RD-hT3" firstAttribute="top" secondItem="X1V-ga-E6W" secondAttribute="top" constant="2" id="pvd-mO-Qgv"/>
+                                    <constraint firstItem="6y6-7L-MLc" firstAttribute="trailing" secondItem="2NJ-of-kUd" secondAttribute="trailing" id="uj0-bU-c63"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xaj-Bk-HVz" firstAttribute="top" secondItem="iNy-GB-sGg" secondAttribute="top" id="2EN-CA-WoT"/>
+                            <constraint firstItem="FZr-eD-1bc" firstAttribute="trailing" secondItem="xaj-Bk-HVz" secondAttribute="trailing" id="BzA-eL-pZF"/>
+                            <constraint firstItem="X1V-ga-E6W" firstAttribute="top" secondItem="FZr-eD-1bc" secondAttribute="bottom" constant="20" id="D97-iw-B6o"/>
+                            <constraint firstItem="X1V-ga-E6W" firstAttribute="leading" secondItem="FZr-eD-1bc" secondAttribute="leading" id="NoS-MX-Usp"/>
+                            <constraint firstItem="FZr-eD-1bc" firstAttribute="leading" secondItem="xaj-Bk-HVz" secondAttribute="leading" id="QN9-KQ-2ug"/>
+                            <constraint firstItem="FZr-eD-1bc" firstAttribute="top" secondItem="xaj-Bk-HVz" secondAttribute="bottom" constant="10" id="RXK-gt-rAO"/>
+                            <constraint firstItem="iNy-GB-sGg" firstAttribute="trailing" secondItem="xaj-Bk-HVz" secondAttribute="trailing" constant="10" id="b0k-1p-0fM"/>
+                            <constraint firstItem="xaj-Bk-HVz" firstAttribute="leading" secondItem="iNy-GB-sGg" secondAttribute="leading" constant="10" id="tyL-uH-Esl"/>
+                            <constraint firstItem="X1V-ga-E6W" firstAttribute="trailing" secondItem="FZr-eD-1bc" secondAttribute="trailing" id="yFN-fM-3bR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iNy-GB-sGg"/>
+                    </view>
+                    <connections>
+                        <outlet property="fromAddress" destination="2NJ-of-kUd" id="KKc-3O-hii"/>
+                        <outlet property="liveTrackingBtn" destination="Dj6-v5-QIH" id="90J-RE-Agg"/>
+                        <outlet property="nameAddress" destination="xaj-Bk-HVz" id="GMJ-1R-zJQ"/>
+                        <outlet property="toAddress" destination="6y6-7L-MLc" id="eJP-3x-Sst"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jbm-az-1SD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3841" y="803"/>
+        </scene>
+        <!--Live Tracking View Controller-->
+        <scene sceneID="m9U-uR-hLJ">
+            <objects>
+                <viewController storyboardIdentifier="LiveTrackingViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O9N-MJ-3eS" customClass="LiveTrackingViewController" customModule="CarPool" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w9p-ho-AOS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yoM-f8-uxj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="U2s-yf-22j" firstAttribute="trailing" secondItem="yoM-f8-uxj" secondAttribute="trailing" id="03o-jR-RUQ"/>
+                            <constraint firstItem="yoM-f8-uxj" firstAttribute="leading" secondItem="U2s-yf-22j" secondAttribute="leading" id="4Yo-HQ-sgZ"/>
+                            <constraint firstItem="U2s-yf-22j" firstAttribute="bottom" secondItem="yoM-f8-uxj" secondAttribute="bottom" id="KCp-S6-uwJ"/>
+                            <constraint firstItem="yoM-f8-uxj" firstAttribute="top" secondItem="U2s-yf-22j" secondAttribute="top" id="Ojf-dO-zcQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="U2s-yf-22j"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ywu-A8-8JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4512" y="791"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="more-than-black" width="25" height="25"/>
+        <image name="more-than-white" width="25" height="25"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

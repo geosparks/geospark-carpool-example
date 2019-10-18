@@ -1,0 +1,31 @@
+<resources>
+    <string name="key">-Your Google API Key-</string>
+    <string name="app_name">Car Pool</string>
+    <string name="enter_mobile_number">Enter mobile number</string>
+    <string name="enter_name">Enter name</string>
+    <string name="get_started">Get Started</string>
+    <string name="trip_history">Trip history</string>
+    <string name="image">image</string>
+    <string name="profile">Profile</string>
+    <string name="give_a_ride">Give A Ride</string>
+    <string name="find_a_ride">Find A Ride</string>
+    <string name="logout">Logout</string>
+    <string name="ride_for_you">Ride For You</string>
+    <string name="no_ride_request_created">No request created!</string>
+    <string name="no_provider_request_created">Your request is created! \n No near by match is for you.</string>
+    <string name="start_trip">Start trip</string>
+    <string name="offer_ride_to">Offer Ride To</string>
+    <string name="from">FROM:&#160;</string>
+    <string name="to">TO:&#160;</string>
+    <string name="location_permission_required">Location permission required</string>
+    <string name="allow">Allow</string>
+    <string name="no_trip_created">No trip created!</string>
+    <string name="end_trip">End Trip</string>
+    <string name="ongoing_trip">ONGOING TRIP</string>
+    <string name="trip_requested">Trip requested:</string>
+    <string name="my_trips">MY TRIPS</string>
+    <string name="cancel">Cancel</string>
+    <string name="trips">Completed Trip</string>
+    <string name="live_tracking">Live Tracking</string>
+    <string name="trip_started">Trip started</string>
+</resources>

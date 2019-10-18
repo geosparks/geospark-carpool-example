@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        tools:context=".ui.RegisterActivity">
+
+    <TextView
+            android:id="@+id/txt_get_started"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corner_register_button"
+            android:layout_alignParentBottom="true"
+            android:textSize="@dimen/txt_17"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="@string/get_started"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_number"
+            android:layout_above="@+id/txt_get_started"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/colorBlack"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="50dp">
+
+        <EditText
+                android:id="@+id/input_number"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:gravity="start|center"
+                android:textSize="@dimen/txt_17"
+                android:inputType="number"
+                android:maxLength="20"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:background="@drawable/bottom_line_edit_text"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="@string/enter_mobile_number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            android:layout_above="@+id/input_layout_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textColorHint="@color/colorBlack"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp">
+
+        <EditText
+                android:id="@+id/input_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:maxLines="1"
+                android:padding="4dp"
+                android:gravity="start|center"
+                android:textSize="@dimen/txt_17"
+                android:maxLength="30"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorBlack"
+                android:inputType="textPersonName"
+                android:background="@drawable/bottom_line_edit_text"
+                android:fontFamily="@font/futura_medium_bt"
+                android:hint="@string/enter_name"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+            android:id="@+id/txt_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:textSize="40sp"
+            android:textColor="@color/colorBlack"
+            android:fontFamily="@font/futura_medium_bt"
+            android:text="Car Pool \n By GeoSpark"/>
+
+    <RelativeLayout
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            android:background="@drawable/rounded_corner_ride"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/txt_load"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura_medium_bt"
+                android:textColor="@color/colorBlack"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/txt_18"
+                android:text="Loading..."/>
+
+        <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_toLeftOf="@+id/txt_load"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:indeterminate="true"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

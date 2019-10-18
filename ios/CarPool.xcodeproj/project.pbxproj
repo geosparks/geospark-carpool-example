@@ -1,0 +1,853 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C07F57731B0764A7817C91EC /* Pods_CarPool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA3D04BDCFEA149E33E120A /* Pods_CarPool.framework */; };
+		DA08FA9C233DD97E00C33509 /* GeoSpark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA08FA9A233DD96600C33509 /* GeoSpark.framework */; };
+		DA08FA9D233DD97E00C33509 /* GeoSpark.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DA08FA9A233DD96600C33509 /* GeoSpark.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DA18A303233B8A1000C8583D /* MavenPro-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA18A2FE233B8A1000C8583D /* MavenPro-Black.ttf */; };
+		DA18A304233B8A1000C8583D /* MavenPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA18A2FF233B8A1000C8583D /* MavenPro-Regular.ttf */; };
+		DA18A305233B8A1000C8583D /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = DA18A300233B8A1000C8583D /* OFL.txt */; };
+		DA18A306233B8A1000C8583D /* MavenPro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA18A301233B8A1000C8583D /* MavenPro-Medium.ttf */; };
+		DA18A307233B8A1000C8583D /* MavenPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DA18A302233B8A1000C8583D /* MavenPro-Bold.ttf */; };
+		DA18A30A233B8C1C00C8583D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A309233B8C1C00C8583D /* Constant.swift */; };
+		DA18A30E233B912200C8583D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A30D233B912200C8583D /* Utils.swift */; };
+		DA18A310233B91B900C8583D /* AppExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A30F233B91B900C8583D /* AppExtension.swift */; };
+		DA18A312233B93A800C8583D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA18A311233B93A800C8583D /* Alert.swift */; };
+		DA1BCB80234498A2006AA005 /* TripHistoryOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BCB7F234498A2006AA005 /* TripHistoryOrigin.swift */; };
+		DA1BCB822344A43B006AA005 /* TripHistoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1BCB812344A43B006AA005 /* TripHistoryDetailsViewController.swift */; };
+		DA35C8C52341C13D009A64A4 /* TripHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C8C32341C13D009A64A4 /* TripHistoryTableViewCell.swift */; };
+		DA35C8C62341C13D009A64A4 /* TripHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA35C8C42341C13D009A64A4 /* TripHistoryTableViewCell.xib */; };
+		DA35C8C92341D3F3009A64A4 /* RideResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C8C82341D3F3009A64A4 /* RideResponse.swift */; };
+		DA35C9092341E1C7009A64A4 /* GetUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9072341E1C7009A64A4 /* GetUserProvider.swift */; };
+		DA35C90A2341E1C7009A64A4 /* GetUserProviderResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9082341E1C7009A64A4 /* GetUserProviderResponse.swift */; };
+		DA35C90F2341E6BA009A64A4 /* FindARideTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C90D2341E6BA009A64A4 /* FindARideTableViewCell.swift */; };
+		DA35C9102341E6BA009A64A4 /* FindARideTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA35C90E2341E6BA009A64A4 /* FindARideTableViewCell.xib */; };
+		DA35C9122341FDD3009A64A4 /* GetaRideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9112341FDD3009A64A4 /* GetaRideDetailsViewController.swift */; };
+		DA35C92123421C20009A64A4 /* GetUserRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C91F23421C20009A64A4 /* GetUserRequestResponse.swift */; };
+		DA35C92223421C20009A64A4 /* GetUserRequestResponseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C92023421C20009A64A4 /* GetUserRequestResponseRequest.swift */; };
+		DA35C93523422E69009A64A4 /* TripResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C93323422E69009A64A4 /* TripResponse.swift */; };
+		DA35C9492343262D009A64A4 /* TripResponseUpdateOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9452343262D009A64A4 /* TripResponseUpdateOrigin.swift */; };
+		DA35C94A2343262D009A64A4 /* TripResponseUpdateCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9462343262D009A64A4 /* TripResponseUpdateCoordinate.swift */; };
+		DA35C94B2343262D009A64A4 /* TripResponseUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9472343262D009A64A4 /* TripResponseUpdate.swift */; };
+		DA35C94C2343262D009A64A4 /* TripResponseUpdateDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA35C9482343262D009A64A4 /* TripResponseUpdateDestination.swift */; };
+		DA6E4F73233C7C780020901A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F72233C7C780020901A /* MainViewController.swift */; };
+		DA6E4F75233C83E30020901A /* FindaRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F74233C83E30020901A /* FindaRideViewController.swift */; };
+		DA6E4F77233C83F10020901A /* GetaRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F76233C83F10020901A /* GetaRideViewController.swift */; };
+		DA6E4F79233C84040020901A /* TripHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F78233C84040020901A /* TripHistoryViewController.swift */; };
+		DA6E4F7B233C84100020901A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F7A233C84100020901A /* ProfileViewController.swift */; };
+		DA6E4F83233CB1AC0020901A /* SharedUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F82233CB1AC0020901A /* SharedUtil.swift */; };
+		DA6E4F85233CB6D80020901A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F84233CB6D70020901A /* Reachability.swift */; };
+		DA6E4F87233CB74C0020901A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F86233CB74C0020901A /* APIManager.swift */; };
+		DA6E4F89233CB7770020901A /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F88233CB7770020901A /* AppConstant.swift */; };
+		DA6E4F8B233CB7F10020901A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F8A233CB7F10020901A /* DataManager.swift */; };
+		DA6E4F8E233CB8610020901A /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F8D233CB8610020901A /* ErrorResponse.swift */; };
+		DA6E4F90233CBB570020901A /* FindRideDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F8F233CBB570020901A /* FindRideDetailsViewController.swift */; };
+		DA6E4F93233CC8980020901A /* AppURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F92233CC8980020901A /* AppURL.swift */; };
+		DA6E4F99233CCCD40020901A /* CreateResponse .swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6E4F96233CCCD40020901A /* CreateResponse .swift */; };
+		DA7294C92344B17300F40B7C /* MyTripFindRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7294C82344B17300F40B7C /* MyTripFindRideViewController.swift */; };
+		DA7294CB2344B66D00F40B7C /* LiveTrackingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7294CA2344B66D00F40B7C /* LiveTrackingViewController.swift */; };
+		DA7294D02344BD5D00F40B7C /* NotificationHandlerAp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7294CE2344BD5D00F40B7C /* NotificationHandlerAp.swift */; };
+		DA7294D12344BD5D00F40B7C /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7294CF2344BD5D00F40B7C /* NotificationHandler.swift */; };
+		DA90ABC2233B881F008A3E60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90ABC1233B881F008A3E60 /* AppDelegate.swift */; };
+		DA90ABC4233B881F008A3E60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90ABC3233B881F008A3E60 /* SceneDelegate.swift */; };
+		DA90ABC6233B881F008A3E60 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA90ABC5233B881F008A3E60 /* LoginViewController.swift */; };
+		DA90ABC9233B881F008A3E60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA90ABC7233B881F008A3E60 /* Main.storyboard */; };
+		DA90ABCB233B8820008A3E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA90ABCA233B8820008A3E60 /* Assets.xcassets */; };
+		DA90ABCE233B8820008A3E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA90ABCC233B8820008A3E60 /* LaunchScreen.storyboard */; };
+		DAB00A92233E1C7D00C0D568 /* TripHistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB00A8F233E1C7C00C0D568 /* TripHistoryData.swift */; };
+		DAB00A93233E1C7D00C0D568 /* TripHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB00A90233E1C7D00C0D568 /* TripHistory.swift */; };
+		DAB00A94233E1C7D00C0D568 /* TripHistoryTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB00A91233E1C7D00C0D568 /* TripHistoryTrip.swift */; };
+		DAB5BF72233CDC1400AF47DB /* UIViewController+Hud.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5BF70233CDC1400AF47DB /* UIViewController+Hud.swift */; };
+		DAB5BF73233CDC1400AF47DB /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB5BF71233CDC1400AF47DB /* HudView.swift */; };
+		DAE0A59923437CDF00FEDE55 /* MyTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE0A59823437CDF00FEDE55 /* MyTripViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DA6E4F80233CADD40020901A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DA08FA9D233DD97E00C33509 /* GeoSpark.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0680F77AF6275A06BBCE7C69 /* Pods-CarPool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarPool.release.xcconfig"; path = "Target Support Files/Pods-CarPool/Pods-CarPool.release.xcconfig"; sourceTree = "<group>"; };
+		8CB0F7D37B8BC4704B2A0F34 /* Pods-CarPool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarPool.debug.xcconfig"; path = "Target Support Files/Pods-CarPool/Pods-CarPool.debug.xcconfig"; sourceTree = "<group>"; };
+		AEA3D04BDCFEA149E33E120A /* Pods_CarPool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CarPool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA08FA9A233DD96600C33509 /* GeoSpark.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GeoSpark.framework; sourceTree = "<group>"; };
+		DA18A2FE233B8A1000C8583D /* MavenPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Black.ttf"; sourceTree = "<group>"; };
+		DA18A2FF233B8A1000C8583D /* MavenPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Regular.ttf"; sourceTree = "<group>"; };
+		DA18A300233B8A1000C8583D /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		DA18A301233B8A1000C8583D /* MavenPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Medium.ttf"; sourceTree = "<group>"; };
+		DA18A302233B8A1000C8583D /* MavenPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenPro-Bold.ttf"; sourceTree = "<group>"; };
+		DA18A309233B8C1C00C8583D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		DA18A30D233B912200C8583D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DA18A30F233B91B900C8583D /* AppExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppExtension.swift; sourceTree = "<group>"; };
+		DA18A311233B93A800C8583D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		DA1BCB7F234498A2006AA005 /* TripHistoryOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripHistoryOrigin.swift; sourceTree = "<group>"; };
+		DA1BCB812344A43B006AA005 /* TripHistoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryDetailsViewController.swift; sourceTree = "<group>"; };
+		DA35C8C32341C13D009A64A4 /* TripHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		DA35C8C42341C13D009A64A4 /* TripHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TripHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		DA35C8C82341D3F3009A64A4 /* RideResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RideResponse.swift; sourceTree = "<group>"; };
+		DA35C9072341E1C7009A64A4 /* GetUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserProvider.swift; sourceTree = "<group>"; };
+		DA35C9082341E1C7009A64A4 /* GetUserProviderResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserProviderResponse.swift; sourceTree = "<group>"; };
+		DA35C90D2341E6BA009A64A4 /* FindARideTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindARideTableViewCell.swift; sourceTree = "<group>"; };
+		DA35C90E2341E6BA009A64A4 /* FindARideTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindARideTableViewCell.xib; sourceTree = "<group>"; };
+		DA35C9112341FDD3009A64A4 /* GetaRideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetaRideDetailsViewController.swift; sourceTree = "<group>"; };
+		DA35C91F23421C20009A64A4 /* GetUserRequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserRequestResponse.swift; sourceTree = "<group>"; };
+		DA35C92023421C20009A64A4 /* GetUserRequestResponseRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetUserRequestResponseRequest.swift; sourceTree = "<group>"; };
+		DA35C93323422E69009A64A4 /* TripResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripResponse.swift; sourceTree = "<group>"; };
+		DA35C9452343262D009A64A4 /* TripResponseUpdateOrigin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripResponseUpdateOrigin.swift; sourceTree = "<group>"; };
+		DA35C9462343262D009A64A4 /* TripResponseUpdateCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripResponseUpdateCoordinate.swift; sourceTree = "<group>"; };
+		DA35C9472343262D009A64A4 /* TripResponseUpdate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripResponseUpdate.swift; sourceTree = "<group>"; };
+		DA35C9482343262D009A64A4 /* TripResponseUpdateDestination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripResponseUpdateDestination.swift; sourceTree = "<group>"; };
+		DA6E4F72233C7C780020901A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		DA6E4F74233C83E30020901A /* FindaRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindaRideViewController.swift; sourceTree = "<group>"; };
+		DA6E4F76233C83F10020901A /* GetaRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetaRideViewController.swift; sourceTree = "<group>"; };
+		DA6E4F78233C84040020901A /* TripHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripHistoryViewController.swift; sourceTree = "<group>"; };
+		DA6E4F7A233C84100020901A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		DA6E4F81233CB0A10020901A /* CarPool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CarPool.entitlements; sourceTree = "<group>"; };
+		DA6E4F82233CB1AC0020901A /* SharedUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedUtil.swift; sourceTree = "<group>"; };
+		DA6E4F84233CB6D70020901A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		DA6E4F86233CB74C0020901A /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		DA6E4F88233CB7770020901A /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		DA6E4F8A233CB7F10020901A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		DA6E4F8D233CB8610020901A /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		DA6E4F8F233CBB570020901A /* FindRideDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindRideDetailsViewController.swift; sourceTree = "<group>"; };
+		DA6E4F92233CC8980020901A /* AppURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppURL.swift; sourceTree = "<group>"; };
+		DA6E4F96233CCCD40020901A /* CreateResponse .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CreateResponse .swift"; sourceTree = "<group>"; };
+		DA7294C82344B17300F40B7C /* MyTripFindRideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripFindRideViewController.swift; sourceTree = "<group>"; };
+		DA7294CA2344B66D00F40B7C /* LiveTrackingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveTrackingViewController.swift; sourceTree = "<group>"; };
+		DA7294CE2344BD5D00F40B7C /* NotificationHandlerAp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandlerAp.swift; sourceTree = "<group>"; };
+		DA7294CF2344BD5D00F40B7C /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
+		DA90ABBE233B881F008A3E60 /* CarPool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarPool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA90ABC1233B881F008A3E60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DA90ABC3233B881F008A3E60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DA90ABC5233B881F008A3E60 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		DA90ABC8233B881F008A3E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DA90ABCA233B8820008A3E60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DA90ABCD233B8820008A3E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DA90ABCF233B8820008A3E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAB00A8F233E1C7C00C0D568 /* TripHistoryData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripHistoryData.swift; sourceTree = "<group>"; };
+		DAB00A90233E1C7D00C0D568 /* TripHistory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripHistory.swift; sourceTree = "<group>"; };
+		DAB00A91233E1C7D00C0D568 /* TripHistoryTrip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripHistoryTrip.swift; sourceTree = "<group>"; };
+		DAB5BF70233CDC1400AF47DB /* UIViewController+Hud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Hud.swift"; sourceTree = "<group>"; };
+		DAB5BF71233CDC1400AF47DB /* HudView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		DAE0A59823437CDF00FEDE55 /* MyTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DA90ABBB233B881F008A3E60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA08FA9C233DD97E00C33509 /* GeoSpark.framework in Frameworks */,
+				C07F57731B0764A7817C91EC /* Pods_CarPool.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FAF2BCEDCF79A11873212B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8CB0F7D37B8BC4704B2A0F34 /* Pods-CarPool.debug.xcconfig */,
+				0680F77AF6275A06BBCE7C69 /* Pods-CarPool.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		AB40A68FCE0CFB74DD915CF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AEA3D04BDCFEA149E33E120A /* Pods_CarPool.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA08FA9E233DE97100C33509 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E4F8D233CB8610020901A /* ErrorResponse.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		DA08FA9F233DE97B00C33509 /* Trip */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C93323422E69009A64A4 /* TripResponse.swift */,
+			);
+			path = Trip;
+			sourceTree = "<group>";
+		};
+		DA18A2FD233B8A1000C8583D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				DA18A2FE233B8A1000C8583D /* MavenPro-Black.ttf */,
+				DA18A2FF233B8A1000C8583D /* MavenPro-Regular.ttf */,
+				DA18A300233B8A1000C8583D /* OFL.txt */,
+				DA18A301233B8A1000C8583D /* MavenPro-Medium.ttf */,
+				DA18A302233B8A1000C8583D /* MavenPro-Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		DA18A308233B8C0800C8583D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E4F92233CC8980020901A /* AppURL.swift */,
+				DA18A309233B8C1C00C8583D /* Constant.swift */,
+				DA18A30F233B91B900C8583D /* AppExtension.swift */,
+				DA6E4F88233CB7770020901A /* AppConstant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		DA18A30B233B909F00C8583D /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E4F86233CB74C0020901A /* APIManager.swift */,
+				DA6E4F8A233CB7F10020901A /* DataManager.swift */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		DA18A30C233B911000C8583D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DAB5BF6F233CDC1400AF47DB /* Spinner */,
+				DA6E4F84233CB6D70020901A /* Reachability.swift */,
+				DA6E4F82233CB1AC0020901A /* SharedUtil.swift */,
+				DA18A30D233B912200C8583D /* Utils.swift */,
+				DA18A311233B93A800C8583D /* Alert.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DA35C8C22341C10B009A64A4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C90C2341E69D009A64A4 /* FindRide */,
+				DA35C90B2341E68D009A64A4 /* TripHistory */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		DA35C8C72341D3E2009A64A4 /* Ride */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C8C82341D3F3009A64A4 /* RideResponse.swift */,
+			);
+			path = Ride;
+			sourceTree = "<group>";
+		};
+		DA35C9062341E1B6009A64A4 /* GetUserProvider */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C9082341E1C7009A64A4 /* GetUserProviderResponse.swift */,
+				DA35C9072341E1C7009A64A4 /* GetUserProvider.swift */,
+			);
+			path = GetUserProvider;
+			sourceTree = "<group>";
+		};
+		DA35C90B2341E68D009A64A4 /* TripHistory */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C8C32341C13D009A64A4 /* TripHistoryTableViewCell.swift */,
+				DA35C8C42341C13D009A64A4 /* TripHistoryTableViewCell.xib */,
+			);
+			path = TripHistory;
+			sourceTree = "<group>";
+		};
+		DA35C90C2341E69D009A64A4 /* FindRide */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C90D2341E6BA009A64A4 /* FindARideTableViewCell.swift */,
+				DA35C90E2341E6BA009A64A4 /* FindARideTableViewCell.xib */,
+			);
+			path = FindRide;
+			sourceTree = "<group>";
+		};
+		DA35C91E23421C12009A64A4 /* GetUserRequest */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C91F23421C20009A64A4 /* GetUserRequestResponse.swift */,
+				DA35C92023421C20009A64A4 /* GetUserRequestResponseRequest.swift */,
+			);
+			path = GetUserRequest;
+			sourceTree = "<group>";
+		};
+		DA35C94423432624009A64A4 /* TripUpdate */ = {
+			isa = PBXGroup;
+			children = (
+				DA35C9472343262D009A64A4 /* TripResponseUpdate.swift */,
+				DA35C9462343262D009A64A4 /* TripResponseUpdateCoordinate.swift */,
+				DA35C9482343262D009A64A4 /* TripResponseUpdateDestination.swift */,
+				DA35C9452343262D009A64A4 /* TripResponseUpdateOrigin.swift */,
+			);
+			path = TripUpdate;
+			sourceTree = "<group>";
+		};
+		DA6E4F8C233CB8340020901A /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				DA7294CD2344BD5D00F40B7C /* Locationhandler */,
+				DA35C94423432624009A64A4 /* TripUpdate */,
+				DA35C91E23421C12009A64A4 /* GetUserRequest */,
+				DA35C9062341E1B6009A64A4 /* GetUserProvider */,
+				DA35C8C72341D3E2009A64A4 /* Ride */,
+				DAB00A7F233E0C5600C0D568 /* Trip History */,
+				DA08FA9F233DE97B00C33509 /* Trip */,
+				DA08FA9E233DE97100C33509 /* Error */,
+				DA6E4F94233CCC2B0020901A /* CreateUser */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		DA6E4F94233CCC2B0020901A /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E4F96233CCCD40020901A /* CreateResponse .swift */,
+			);
+			path = CreateUser;
+			sourceTree = "<group>";
+		};
+		DA7294CD2344BD5D00F40B7C /* Locationhandler */ = {
+			isa = PBXGroup;
+			children = (
+				DA7294CE2344BD5D00F40B7C /* NotificationHandlerAp.swift */,
+				DA7294CF2344BD5D00F40B7C /* NotificationHandler.swift */,
+			);
+			path = Locationhandler;
+			sourceTree = "<group>";
+		};
+		DA90ABB5233B881F008A3E60 = {
+			isa = PBXGroup;
+			children = (
+				DA90ABC0233B881F008A3E60 /* CarPool */,
+				DA90ABBF233B881F008A3E60 /* Products */,
+				2FAF2BCEDCF79A11873212B6 /* Pods */,
+				AB40A68FCE0CFB74DD915CF7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DA90ABBF233B881F008A3E60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DA90ABBE233B881F008A3E60 /* CarPool.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DA90ABC0233B881F008A3E60 /* CarPool */ = {
+			isa = PBXGroup;
+			children = (
+				DA6E4F81233CB0A10020901A /* CarPool.entitlements */,
+				DA08FA9A233DD96600C33509 /* GeoSpark.framework */,
+				DA90ABD5233B8870008A3E60 /* AppDelegate */,
+				DA18A308233B8C0800C8583D /* Constant */,
+				DA18A30B233B909F00C8583D /* DataManager */,
+				DA90ABD7233B8889008A3E60 /* Others */,
+				DA6E4F8C233CB8340020901A /* Response */,
+				DA18A30C233B911000C8583D /* Utils */,
+				DA35C8C22341C10B009A64A4 /* view */,
+				DA90ABD6233B887E008A3E60 /* ViewController */,
+			);
+			path = CarPool;
+			sourceTree = "<group>";
+		};
+		DA90ABD5233B8870008A3E60 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DA90ABC1233B881F008A3E60 /* AppDelegate.swift */,
+				DA90ABC3233B881F008A3E60 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DA90ABD6233B887E008A3E60 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DA90ABC5233B881F008A3E60 /* LoginViewController.swift */,
+				DA6E4F72233C7C780020901A /* MainViewController.swift */,
+				DA6E4F74233C83E30020901A /* FindaRideViewController.swift */,
+				DA6E4F8F233CBB570020901A /* FindRideDetailsViewController.swift */,
+				DA6E4F76233C83F10020901A /* GetaRideViewController.swift */,
+				DA35C9112341FDD3009A64A4 /* GetaRideDetailsViewController.swift */,
+				DA6E4F78233C84040020901A /* TripHistoryViewController.swift */,
+				DA1BCB812344A43B006AA005 /* TripHistoryDetailsViewController.swift */,
+				DA6E4F7A233C84100020901A /* ProfileViewController.swift */,
+				DAE0A59823437CDF00FEDE55 /* MyTripViewController.swift */,
+				DA7294C82344B17300F40B7C /* MyTripFindRideViewController.swift */,
+				DA7294CA2344B66D00F40B7C /* LiveTrackingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DA90ABD7233B8889008A3E60 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				DA18A2FD233B8A1000C8583D /* Font */,
+				DA90ABC7233B881F008A3E60 /* Main.storyboard */,
+				DA90ABCA233B8820008A3E60 /* Assets.xcassets */,
+				DA90ABCC233B8820008A3E60 /* LaunchScreen.storyboard */,
+				DA90ABCF233B8820008A3E60 /* Info.plist */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		DAB00A7F233E0C5600C0D568 /* Trip History */ = {
+			isa = PBXGroup;
+			children = (
+				DA1BCB7F234498A2006AA005 /* TripHistoryOrigin.swift */,
+				DAB00A90233E1C7D00C0D568 /* TripHistory.swift */,
+				DAB00A8F233E1C7C00C0D568 /* TripHistoryData.swift */,
+				DAB00A91233E1C7D00C0D568 /* TripHistoryTrip.swift */,
+			);
+			path = "Trip History";
+			sourceTree = "<group>";
+		};
+		DAB5BF6F233CDC1400AF47DB /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				DAB5BF70233CDC1400AF47DB /* UIViewController+Hud.swift */,
+				DAB5BF71233CDC1400AF47DB /* HudView.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DA90ABBD233B881F008A3E60 /* CarPool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA90ABD2233B8820008A3E60 /* Build configuration list for PBXNativeTarget "CarPool" */;
+			buildPhases = (
+				9C3943C2E6BF8F2D051E6DCE /* [CP] Check Pods Manifest.lock */,
+				DA90ABBA233B881F008A3E60 /* Sources */,
+				DA90ABBB233B881F008A3E60 /* Frameworks */,
+				DA90ABBC233B881F008A3E60 /* Resources */,
+				A5289DC1DDFE352DAF663B44 /* [CP] Copy Pods Resources */,
+				DA6E4F80233CADD40020901A /* Embed Frameworks */,
+				D0733F4F104E09A84DFD5B98 /* [CP] Embed Pods Frameworks */,
+				DA0EA9272345EF330031480E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CarPool;
+			productName = CarPool;
+			productReference = DA90ABBE233B881F008A3E60 /* CarPool.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DA90ABB6233B881F008A3E60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "GeoSpark, Inc";
+				TargetAttributes = {
+					DA90ABBD233B881F008A3E60 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = DA90ABB9233B881F008A3E60 /* Build configuration list for PBXProject "CarPool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DA90ABB5233B881F008A3E60;
+			productRefGroup = DA90ABBF233B881F008A3E60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DA90ABBD233B881F008A3E60 /* CarPool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DA90ABBC233B881F008A3E60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA35C9102341E6BA009A64A4 /* FindARideTableViewCell.xib in Resources */,
+				DA18A305233B8A1000C8583D /* OFL.txt in Resources */,
+				DA90ABCE233B8820008A3E60 /* LaunchScreen.storyboard in Resources */,
+				DA18A304233B8A1000C8583D /* MavenPro-Regular.ttf in Resources */,
+				DA35C8C62341C13D009A64A4 /* TripHistoryTableViewCell.xib in Resources */,
+				DA18A303233B8A1000C8583D /* MavenPro-Black.ttf in Resources */,
+				DA18A306233B8A1000C8583D /* MavenPro-Medium.ttf in Resources */,
+				DA18A307233B8A1000C8583D /* MavenPro-Bold.ttf in Resources */,
+				DA90ABCB233B8820008A3E60 /* Assets.xcassets in Resources */,
+				DA90ABC9233B881F008A3E60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9C3943C2E6BF8F2D051E6DCE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CarPool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5289DC1DDFE352DAF663B44 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0733F4F104E09A84DFD5B98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CarPool/Pods-CarPool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA0EA9272345EF330031480E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f84951c93db324e6b02e5bb65fd645a00c2a89bb 3a7e5c7ab3c268bf2eebb1de7216fdcf6615611b4f92b3f261bae71c9fbd523c\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA90ABBA233B881F008A3E60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6E4F87233CB74C0020901A /* APIManager.swift in Sources */,
+				DA18A30E233B912200C8583D /* Utils.swift in Sources */,
+				DA35C94A2343262D009A64A4 /* TripResponseUpdateCoordinate.swift in Sources */,
+				DA7294D12344BD5D00F40B7C /* NotificationHandler.swift in Sources */,
+				DA35C92223421C20009A64A4 /* GetUserRequestResponseRequest.swift in Sources */,
+				DA6E4F93233CC8980020901A /* AppURL.swift in Sources */,
+				DA35C90A2341E1C7009A64A4 /* GetUserProviderResponse.swift in Sources */,
+				DAB00A92233E1C7D00C0D568 /* TripHistoryData.swift in Sources */,
+				DA35C90F2341E6BA009A64A4 /* FindARideTableViewCell.swift in Sources */,
+				DA6E4F99233CCCD40020901A /* CreateResponse .swift in Sources */,
+				DA35C9492343262D009A64A4 /* TripResponseUpdateOrigin.swift in Sources */,
+				DA7294CB2344B66D00F40B7C /* LiveTrackingViewController.swift in Sources */,
+				DA6E4F79233C84040020901A /* TripHistoryViewController.swift in Sources */,
+				DA35C9092341E1C7009A64A4 /* GetUserProvider.swift in Sources */,
+				DAE0A59923437CDF00FEDE55 /* MyTripViewController.swift in Sources */,
+				DA35C93523422E69009A64A4 /* TripResponse.swift in Sources */,
+				DA90ABC6233B881F008A3E60 /* LoginViewController.swift in Sources */,
+				DA35C94B2343262D009A64A4 /* TripResponseUpdate.swift in Sources */,
+				DA90ABC2233B881F008A3E60 /* AppDelegate.swift in Sources */,
+				DA7294D02344BD5D00F40B7C /* NotificationHandlerAp.swift in Sources */,
+				DA35C94C2343262D009A64A4 /* TripResponseUpdateDestination.swift in Sources */,
+				DA18A310233B91B900C8583D /* AppExtension.swift in Sources */,
+				DA6E4F8B233CB7F10020901A /* DataManager.swift in Sources */,
+				DAB00A94233E1C7D00C0D568 /* TripHistoryTrip.swift in Sources */,
+				DA35C8C92341D3F3009A64A4 /* RideResponse.swift in Sources */,
+				DA6E4F83233CB1AC0020901A /* SharedUtil.swift in Sources */,
+				DA1BCB822344A43B006AA005 /* TripHistoryDetailsViewController.swift in Sources */,
+				DA90ABC4233B881F008A3E60 /* SceneDelegate.swift in Sources */,
+				DAB5BF73233CDC1400AF47DB /* HudView.swift in Sources */,
+				DA6E4F85233CB6D80020901A /* Reachability.swift in Sources */,
+				DA6E4F73233C7C780020901A /* MainViewController.swift in Sources */,
+				DA35C9122341FDD3009A64A4 /* GetaRideDetailsViewController.swift in Sources */,
+				DA1BCB80234498A2006AA005 /* TripHistoryOrigin.swift in Sources */,
+				DA6E4F75233C83E30020901A /* FindaRideViewController.swift in Sources */,
+				DA18A30A233B8C1C00C8583D /* Constant.swift in Sources */,
+				DAB00A93233E1C7D00C0D568 /* TripHistory.swift in Sources */,
+				DAB5BF72233CDC1400AF47DB /* UIViewController+Hud.swift in Sources */,
+				DA35C92123421C20009A64A4 /* GetUserRequestResponse.swift in Sources */,
+				DA6E4F7B233C84100020901A /* ProfileViewController.swift in Sources */,
+				DA6E4F77233C83F10020901A /* GetaRideViewController.swift in Sources */,
+				DA35C8C52341C13D009A64A4 /* TripHistoryTableViewCell.swift in Sources */,
+				DA6E4F90233CBB570020901A /* FindRideDetailsViewController.swift in Sources */,
+				DA7294C92344B17300F40B7C /* MyTripFindRideViewController.swift in Sources */,
+				DA6E4F8E233CB8610020901A /* ErrorResponse.swift in Sources */,
+				DA18A312233B93A800C8583D /* Alert.swift in Sources */,
+				DA6E4F89233CB7770020901A /* AppConstant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DA90ABC7233B881F008A3E60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA90ABC8233B881F008A3E60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DA90ABCC233B8820008A3E60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA90ABCD233B8820008A3E60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DA90ABD0233B8820008A3E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		DA90ABD1233B8820008A3E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DA90ABD3233B8820008A3E60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8CB0F7D37B8BC4704B2A0F34 /* Pods-CarPool.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CarPool/CarPool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B92BAJFGJP;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarPool",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CarPool/Others/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geospark.carpooling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DA90ABD4233B8820008A3E60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0680F77AF6275A06BBCE7C69 /* Pods-CarPool.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CarPool/CarPool.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEVELOPMENT_TEAM = B92BAJFGJP;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/CarPool",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/CarPool/Others/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.geospark.carpooling;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DA90ABB9233B881F008A3E60 /* Build configuration list for PBXProject "CarPool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA90ABD0233B8820008A3E60 /* Debug */,
+				DA90ABD1233B8820008A3E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA90ABD2233B8820008A3E60 /* Build configuration list for PBXNativeTarget "CarPool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA90ABD3233B8820008A3E60 /* Debug */,
+				DA90ABD4233B8820008A3E60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DA90ABB6233B881F008A3E60 /* Project object */;
+}
