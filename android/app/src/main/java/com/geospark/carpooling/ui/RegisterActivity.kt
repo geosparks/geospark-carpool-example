@@ -1,6 +1,7 @@
 package com.geospark.carpooling.ui
 
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.View
@@ -60,15 +61,39 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
         } else if (!hasInternet()) {
             showToast(Constant.NETWORK_ERROR)
         } else {
-            if (!GeoSpark.checkLocationPermission(this)) {
-                GeoSpark.requestLocationPermission(this);
-            } else if (!GeoSpark.checkLocationServices(this)) {
-                GeoSpark.requestLocationServices(this);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                startTrackingQ(name, phone)
             } else {
-                show()
-                name = name.substring(0, 1).toUpperCase() + name.substring(1)
-                getUser(phone, name)
+                startTracking(name, phone)
             }
+        }
+    }
+
+    private fun startTracking(name: String, phone: String) {
+        if (!GeoSpark.checkLocationPermission(this)) {
+            GeoSpark.requestLocationPermission(this)
+        } else if (!GeoSpark.checkLocationServices(this)) {
+            GeoSpark.requestLocationServices(this)
+        } else {
+            show()
+            val mod = name.substring(0, 1).toUpperCase() + name.substring(1)
+            getUser(phone, mod)
+        }
+    }
+
+    private fun startTrackingQ(name: String, phone: String) {
+        if (!GeoSpark.checkActivityPermission(this)) {
+            GeoSpark.requestActivityPermission(this)
+        } else if (!GeoSpark.checkLocationPermission(this)) {
+            GeoSpark.requestLocationPermission(this)
+        } else if (!GeoSpark.checkBackgroundLocationPermission(this)) {
+            GeoSpark.requestBackgroundLocationPermission(this)
+        } else if (!GeoSpark.checkLocationServices(this)) {
+            GeoSpark.requestLocationServices(this)
+        } else {
+            show()
+            val mod = name.substring(0, 1).toUpperCase() + name.substring(1)
+            getUser(phone, mod)
         }
     }
 
@@ -98,22 +123,27 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private fun createUser(phone: String, name: String, userId: String) {
         APIManager.createUser(phone, name, userId, object : UserCallback {
             override fun successTrue(user: User) {
-                GeoSpark.toggleEvents(applicationContext, true, true, true, object : GeoSparkEventsCallback {
-                    override fun onSuccess(p0: GeoSparkEvents?) {
-                        try {
-                            hide()
-                            setName(user.userData!!.userFields!!.name!!)
-                            setPhone(user.userData!!.userFields!!.phone!!)
-                            setUserId(user.userData!!.userFields!!.userId!!)
-                            navigate()
-                        } catch (e: Exception) {
+                GeoSpark.toggleEvents(
+                    applicationContext,
+                    true,
+                    true,
+                    true,
+                    object : GeoSparkEventsCallback {
+                        override fun onSuccess(p0: GeoSparkEvents?) {
+                            try {
+                                hide()
+                                setName(user.userData!!.userFields!!.name!!)
+                                setPhone(user.userData!!.userFields!!.phone!!)
+                                setUserId(user.userData!!.userFields!!.userId!!)
+                                navigate()
+                            } catch (e: Exception) {
+                            }
                         }
-                    }
 
-                    override fun onFailure(p0: GeoSparkError?) {
-                        hide()
-                    }
-                })
+                        override fun onFailure(p0: GeoSparkError?) {
+                            hide()
+                        }
+                    })
             }
 
             override fun successFalse() {
@@ -141,16 +171,21 @@ class RegisterActivity : AppCompatActivity(), View.OnClickListener {
     private fun geoSparkGetUser(userId: String) {
         GeoSpark.getUser(this, userId, object : GeoSparkCallBack {
             override fun onSuccess(geoSparkUser: GeoSparkUser) {
-                GeoSpark.toggleEvents(applicationContext, true, true, true, object : GeoSparkEventsCallback {
-                    override fun onSuccess(p0: GeoSparkEvents?) {
-                        hide()
-                        navigate()
-                    }
+                GeoSpark.toggleEvents(
+                    applicationContext,
+                    true,
+                    true,
+                    true,
+                    object : GeoSparkEventsCallback {
+                        override fun onSuccess(p0: GeoSparkEvents?) {
+                            hide()
+                            navigate()
+                        }
 
-                    override fun onFailure(p0: GeoSparkError?) {
-                        hide()
-                    }
-                })
+                        override fun onFailure(p0: GeoSparkError?) {
+                            hide()
+                        }
+                    })
             }
 
             override fun onFailure(goSparkError: GeoSparkError) {

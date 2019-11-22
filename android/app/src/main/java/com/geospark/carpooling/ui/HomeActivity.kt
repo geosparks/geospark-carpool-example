@@ -98,7 +98,8 @@ class HomeActivity : AppCompatActivity(), View.OnClickListener {
     private fun showTracking() {
         try {
             if (getTripId()!!.isNotEmpty()) {
-                val url: String = "https://trips.gs/" + Crypt.encodeString(getTripId() + "|" + "sdfgh")
+                val url: String =
+                    "https://trips.gs/" + Crypt.encodeString(getTripId() + "|" + "sdfgh")
                 startActivity(Intent(this, LiveTrackingActivity::class.java).putExtra("URL", url))
             }
         } catch (e: Exception) {

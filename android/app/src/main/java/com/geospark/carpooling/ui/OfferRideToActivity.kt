@@ -72,21 +72,25 @@ class OfferRideToActivity : AppCompatActivity(), View.OnClickListener {
                 APIManager.addMetadata(it!!, object : UserCallback {
                     override fun successTrue(user: User) {
                         //Start trip
-                        GeoSpark.startTrip(applicationContext, it, "", object : GeoSparkTripCallBack {
-                            override fun onSuccess(p0: GeoSparkTrip?) {
-                                try {
-                                    setStarted(true)
-                                    hide()
-                                    onBackPressed()
-                                } catch (e: Exception) {
+                        GeoSpark.startTrip(
+                            applicationContext,
+                            it,
+                            "",
+                            object : GeoSparkTripCallBack {
+                                override fun onSuccess(p0: GeoSparkTrip?) {
+                                    try {
+                                        setStarted(true)
+                                        hide()
+                                        onBackPressed()
+                                    } catch (e: Exception) {
 
+                                    }
                                 }
-                            }
 
-                            override fun onFailure(p0: GeoSparkError?) {
-                                hide()
-                            }
-                        })
+                                override fun onFailure(p0: GeoSparkError?) {
+                                    hide()
+                                }
+                            })
                     }
 
                     override fun successFalse() {

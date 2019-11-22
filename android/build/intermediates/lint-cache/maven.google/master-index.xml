@@ -132,4 +132,8 @@
   <androidx.ads/>
   <com.android/>
   <com.google.ads.interactivemedia.v3/>
+  <androidx.ui/>
+  <androidx.compose/>
+  <com.google.androidbrowserhelper/>
+  <org.jetbrains.kotlin/>
 </metadata>
