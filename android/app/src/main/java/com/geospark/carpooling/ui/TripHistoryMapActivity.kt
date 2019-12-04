@@ -2,6 +2,7 @@ package com.geospark.carpooling.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.Color
 import android.net.Uri
@@ -58,9 +59,10 @@ class TripHistoryMapActivity : AppCompatActivity(), OnMapReadyCallback,
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_trip_history_map)
-        mCustomMarkerView = (getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(
-            R.layout.home_custom_marker, null
-        )
+        mCustomMarkerView =
+            (getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(
+                R.layout.home_custom_marker, null
+            )
         mImgMarker = mCustomMarkerView!!.findViewById(R.id.img_marker)
         mMapFragment = supportFragmentManager.findFragmentById(R.id.map) as? SupportMapFragment
         mMapFragment?.getMapAsync(this)
@@ -157,22 +159,29 @@ class TripHistoryMapActivity : AppCompatActivity(), OnMapReadyCallback,
     }
 
     private fun getDirectionsUrl(origin: LatLng, dest: LatLng): String {
-        // Origin
-        val strOrigin = "origin=" + origin.latitude + "," + origin.longitude
-        // Destination
-        val strDestination = "destination=" + dest.latitude + "," + dest.longitude
-        //Mode & Sensor
-        val sensor = "sensor=false"
-        val mode = "mode=driving"
-        //Key
-        val key = "&key=" + resources.getString(R.string.key)
-        //Parameters
-        val parameters = "$strOrigin&$strDestination&$sensor&$mode$key"
-        // Building the url to the web service
-        return "https://maps.googleapis.com/maps/api/directions/json?$parameters"
+        var ai: ApplicationInfo? = null
+        try {
+            ai = packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA)
+        } catch (e: PackageManager.NameNotFoundException) {
+        }
+        val bundle = ai!!.metaData
+        val myApiKey = bundle.getString("com.geospark.google.API_KEY")
+        return "https://maps.googleapis.com/maps/api/directions/json?" +
+                "origin=" + origin.latitude + "," + origin.longitude +
+                "&" +
+                "destination=" + dest.latitude + "," + dest.longitude +
+                "&" +
+                "sensor=false" +
+                "&" +
+                "mode=driving" +
+                "&key=" + myApiKey
     }
 
-    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<String>,
+        grantResults: IntArray
+    ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == GeoSpark.REQUEST_CODE_LOCATION_PERMISSION) {
             if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
@@ -185,7 +194,11 @@ class TripHistoryMapActivity : AppCompatActivity(), OnMapReadyCallback,
 
     private fun permissionSnackbar() {
         try {
-            val snackbar = Snackbar.make(fab, R.string.location_permission_required, Snackbar.LENGTH_INDEFINITE)
+            val snackbar = Snackbar.make(
+                fab,
+                R.string.location_permission_required,
+                Snackbar.LENGTH_INDEFINITE
+            )
                 .setAction(R.string.allow, View.OnClickListener {
                     val i = Intent(
                         Settings.ACTION_APPLICATION_DETAILS_SETTINGS,
@@ -218,7 +231,8 @@ class TripHistoryMapActivity : AppCompatActivity(), OnMapReadyCallback,
         }
     }
 
-    internal inner class ParserTask : AsyncTask<String, Int, List<List<HashMap<String, String>>>>() {
+    internal inner class ParserTask :
+        AsyncTask<String, Int, List<List<HashMap<String, String>>>>() {
         override fun doInBackground(vararg jsonData: String): List<List<HashMap<String, String>>>? {
             val jObject: JSONObject
             var routes: List<List<HashMap<String, String>>>? = null

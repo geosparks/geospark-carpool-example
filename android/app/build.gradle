@@ -11,8 +11,8 @@ android {
         applicationId "com.geospark.carpooling"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 3
-        versionName "1.2"
+        versionCode 4
+        versionName "1.3"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -42,7 +42,7 @@ dependencies {
     implementation 'com.google.maps.android:android-maps-utils:0.4.4'
     implementation 'com.google.zxing:core:3.3.3'
     //SDK
-    implementation 'com.geospark.android:geospark:2.2.1'
+    implementation 'com.geospark.android:geospark:2.2.3'
     //Firebase
     implementation 'com.google.firebase:firebase-messaging:20.0.0'
 }

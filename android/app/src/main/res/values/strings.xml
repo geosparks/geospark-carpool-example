@@ -1,5 +1,4 @@
 <resources>
-    <string name="key">-Your Google API Key-</string>
     <string name="app_name">Car Pool</string>
     <string name="enter_mobile_number">Enter mobile number</string>
     <string name="enter_name">Enter name</string>
